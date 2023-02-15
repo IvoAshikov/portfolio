@@ -1,0 +1,48 @@
+.right-sidebar-container {
+  z-index: 3;
+  position: fixed;
+  height: 300px;
+  background-color: transparent;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  right: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.right-sections-list {
+  list-style: none;
+  padding: 0;
+}
+
+.right-sections-container {
+  margin-top: 3rem;
+}
+
+.rlink {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: ease 0.4s;
+}
+
+.rlink:hover {
+  transform: translateY(-3px);
+  transition: ease 0.4s;
+}

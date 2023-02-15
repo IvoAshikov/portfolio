@@ -1,0 +1,249 @@
+.contact-section {
+  margin: 5rem 17rem;
+}
+
+.right-line,
+.left-line {
+  width: 10rem;
+}
+
+.contact-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.contact-header {
+  font-size: 2.3rem;
+}
+
+.message-container {
+  margin: 0 5rem 5rem 5rem;
+}
+
+.name-mail-container {
+  margin: 0 5rem 10rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+}
+
+.inp .label {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  font-size: 16px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+
+.inp svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 26px;
+  fill: none;
+  z-index: 4;
+}
+
+.inp svg path {
+  stroke: var(--button-hover);
+  stroke-width: 2;
+}
+
+.inp svg path {
+  transition: all 0.2s ease;
+}
+
+.inp .inputs {
+  position: relative;
+  width: 200px;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: var(--primary-color);
+  transition: all 0.15s ease;
+  z-index: 5;
+}
+.inp input:not(:placeholder-shown) + span {
+  color: var(--primary-color);
+  transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+.inp input:focus + span {
+  color: var(--primary-color);
+  transform: translateY(-26px) scale(0.75);
+  transition-delay: 0.1s;
+}
+.inp input:focus + span + svg path {
+  stroke: var(--button-hover);
+  animation: elasticInput 0.4s ease forwards;
+}
+
+.mess-inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+.mess-inp .label {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  font-size: 16px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+
+.mess-inp svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 26px;
+  fill: none;
+  z-index: 4;
+}
+
+.mess-inp svg path {
+  stroke: var(--primary-color);
+  stroke-width: 2;
+}
+
+.mess-inp svg path d {
+  transition: all 0.2s ease;
+}
+
+.mess-inp .mess-inputs {
+  position: relative;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: var(--primary-color);
+  transition: all 0.15s ease;
+  z-index: 5;
+}
+
+.mess-inp input:not(:placeholder-shown) + span {
+  color: var(--primary-color);
+  transform: translateY(-26px) scale(0.75);
+}
+.mess-inp input:focus {
+  background: none;
+  outline: none;
+}
+.mess-inp input:focus + span {
+  color: var(--primary-color);
+  transform: translateY(-26px) scale(0.75);
+  transition-delay: 0.1s;
+}
+.mess-inp input:focus + span + svg path {
+  stroke: var(--button-hover);
+  animation: elasticInput 0.4s ease forwards;
+}
+
+.send-button-container {
+  margin: 0 5rem 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button {
+  background-color: var(--primary-color);
+  border: 0;
+  color: var(--secondary-color);
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.send-button:hover {
+  background-color: var(--button-hover);
+  transition: background-color 0.2s;
+}
+
+.captcha-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+
+.wrong-captcha,
+.email-sent {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-top: 0.3rem;
+}
+
+@keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 200,25");
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    margin: 0;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+  }
+  .form {
+    width: 100%;
+  }
+  .name-mail-container {
+    margin: 0 0 5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .contact-form-svg {
+    width: 150px;
+  }
+  .name-container,
+  .mail-container {
+    width: 150px;
+  }
+  .inp .inputs {
+    width: 150px;
+    height: 36px;
+  }
+  .message-container {
+    margin: 0 0 5rem 0;
+    width: 90%;
+    padding: 1rem;
+  }
+  .mess-inp {
+    width: 100%;
+  }
+  .mess-svg {
+    width: 100%;
+  }
+}

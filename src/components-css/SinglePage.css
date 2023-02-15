@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+  .single-page,
+  .main-content {
+    width: 100%;
+  }
+}
+
+.blur {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}

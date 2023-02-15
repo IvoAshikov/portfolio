@@ -1,0 +1,90 @@
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: var(--primary-color);
+}
+
+.logo-container-loader {
+  position: relative;
+  width: 75px;
+  height: 80px;
+}
+
+.letter {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.logo-container-loader .letter {
+  position: absolute;
+  transition: all 0.2s linear;
+}
+
+.pos1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 3px;
+  margin-right: 8px;
+}
+
+.pos2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 3px;
+  margin-left: 8px;
+}
+
+.pos3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+.pos4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 3px;
+  margin-left: 8px;
+}
+
+.path1 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: -1000;
+  stroke: var(--primary-color);
+}
+
+.path2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: -1000;
+  stroke: var(--primary-color);
+}
+
+.path3 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke: var(--primary-color);
+}
+
+.path4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke: var(--primary-color);
+}
+
+.anim {
+  animation: dash 2s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

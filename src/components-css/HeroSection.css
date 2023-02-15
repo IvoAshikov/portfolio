@@ -1,0 +1,95 @@
+.hero-section {
+  margin-left: 13rem;
+  margin-top: 14rem;
+  margin-bottom: 12rem;
+}
+
+.text-forms-container {
+  display: flex;
+  position: relative;
+}
+
+.name-text {
+  width: fit-content;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #b8b8b8;
+}
+
+.build-text {
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: -15px;
+  margin-bottom: 35px;
+}
+
+.small-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.button-container {
+  margin-top: 4rem;
+}
+
+.explore-button {
+  background-color: var(--primary-color);
+  border: 0;
+  color: var(--secondary-color);
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  position: relative;
+  z-index: 20;
+}
+
+.explore-button:hover {
+  background-color: var(--button-hover);
+  transition: background-color 0.2s;
+}
+
+.form-one {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: 5rem;
+  top: -5rem;
+}
+
+.form-one path {
+  stroke: var(--primary-color);
+}
+
+.form-two {
+  width: 800px;
+  height: 200px;
+  position: absolute;
+  left: -13rem;
+  bottom: -15rem;
+}
+
+.form-two path {
+  stroke: var(--primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .form-one {
+    display: none;
+  }
+  .form-two {
+    display: none;
+  }
+  .hero-section {
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    margin-left: 0;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+}

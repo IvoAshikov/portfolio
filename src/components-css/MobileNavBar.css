@@ -1,0 +1,157 @@
+.mob-nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: var(--secondary-color);
+  z-index: 50;
+}
+
+.top-part-container {
+  width: calc(100% - 2rem);
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mob-logo-container {
+  position: relative;
+  width: 2.5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.mob-logo-container .mob-letter {
+  position: absolute;
+  transition: all 0.4s linear;
+}
+
+.mob-letter {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.mob-pos1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 3px;
+  margin-right: 6px;
+}
+
+.mob-pos2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 3px;
+  margin-left: 6px;
+}
+
+.mob-pos3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3px;
+  margin-right: 6px;
+}
+
+.mob-pos4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 3px;
+  margin-left: 6px;
+}
+
+.mob-burger-container {
+  width: 2.5rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mob-line {
+  width: 25px;
+  height: 2px;
+  background-color: #f3f3f3;
+}
+
+.mob-line1 {
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
+  transform: rotate(0);
+}
+.mob-line2 {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+.mob-line3 {
+  position: absolute;
+  bottom: 0;
+  transition: 0.5s;
+  transform: rotate(0);
+}
+
+.sidebar-container {
+  position: absolute;
+  z-index: 15;
+  background-color: var(--project-background-color);
+  width: 100%;
+  height: 70%;
+  top: 6rem;
+  height: fit-content;
+  border-bottom: 1px solid var(--primary-color);
+  border-top: 1px solid var(--primary-color);
+}
+
+.sidebar-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.sidebar-option {
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 1px;
+  background-color: var(--primary-color);
+}
+
+.animate-line1 {
+  transition: 0.5s;
+  transform: rotate(405deg);
+  top: 50%;
+}
+
+.animate-line3 {
+  transition: 0.5s;
+  transform: rotate(-405deg);
+  top: 50%;
+}
+
+.animate-line2 {
+  opacity: 0;
+}

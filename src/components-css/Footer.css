@@ -1,0 +1,23 @@
+.footer-section {
+  margin-top: 10rem;
+  height: 100px;
+}
+
+.footer-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-section {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
+}

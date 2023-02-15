@@ -1,0 +1,127 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.nb-logo-container {
+  position: relative;
+  width: 40px;
+  height: 45px;
+  margin-left: 8rem;
+  cursor: pointer;
+}
+
+.nb-logo-container .nb-letter {
+  position: absolute;
+  transition: all 0.4s linear;
+}
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 8rem;
+}
+
+.nb-letter {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nb-pos1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 3px;
+  margin-right: 6px;
+}
+
+.nb-pos2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 3px;
+  margin-left: 6px;
+}
+
+.nb-pos3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3px;
+  margin-right: 6px;
+}
+
+.nb-pos4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 3px;
+  margin-left: 6px;
+}
+
+.sections-container {
+  display: flex;
+  align-items: center;
+  float: right;
+}
+
+.sections-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  margin-left: 3rem;
+  font-weight: 600;
+  transform: translateY(0);
+  transition: ease 0.4s;
+  cursor: pointer;
+}
+
+.section:hover {
+  transform: translateY(-3px);
+  transition: ease 0.4s;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+}
+
+.links-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.list-link {
+  cursor: pointer;
+  transform: translateY(0);
+  transition: ease 0.4s;
+}
+
+.list-link:hover {
+  transform: translateY(-3px);
+  transition: ease 0.4s;
+}
+
+.link {
+  color: var(--primary-color);
+  margin-left: 3rem;
+}
+
+.moon-svg {
+  fill: var(--primary-color);
+}
+
+.sun-svg {
+  fill: var(--secondary-color);
+}

@@ -1,0 +1,149 @@
+.about-section {
+  margin-left: 13rem;
+  margin-top: 10rem;
+}
+
+.about-container {
+  display: flex;
+}
+
+.about-header-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-line {
+  width: 9rem;
+  background-color: var(--primary-color);
+  height: 2px;
+  margin-left: 1rem;
+}
+
+.about-header {
+  font-size: 2.3rem;
+}
+
+.about-text-container {
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.technologies-list-container {
+  width: 100%;
+}
+
+.technologies-list {
+  list-style: none;
+  columns: 2;
+  padding: 1em;
+}
+
+.technology::before {
+  content: "";
+  border-color: transparent var(--primary-color);
+  border-style: solid;
+  border-width: 0.25em 0 0.25em 0.35em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
+}
+
+.frame-container {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  width: 20rem;
+  height: 22rem;
+  position: relative;
+}
+
+.photo-container {
+  width: 20rem;
+  height: 22rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo {
+  width: 18rem;
+  height: 20rem;
+}
+
+.frame-top {
+  height: 2px;
+  width: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+}
+
+.frame-left {
+  height: 3rem;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+}
+
+.frame-right {
+  background-color: var(--primary-color);
+  height: 3rem;
+  width: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.frame-bottom {
+  background-color: var(--primary-color);
+  height: 2px;
+  width: 3rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.about-text {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-section {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-text-container {
+    width: 100%;
+  }
+  .frame-container {
+    margin: 0;
+  }
+  .technologies-list-container {
+    width: 80%;
+    padding-left: 2rem;
+  }
+  .technology {
+    width: 100%;
+  }
+  .ph-pos-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    word-break: break-word;
+  }
+}
