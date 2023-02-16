@@ -155,3 +155,16 @@
 .animate-line2 {
   opacity: 0;
 }
+
+.m-nav-about {
+  margin-top: 1rem;
+}
+
+.m-nav-codepen {
+  margin-bottom: 1rem;
+}
+
+.h-line {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

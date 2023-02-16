@@ -18,13 +18,13 @@ function MobileNavBar({ setMenuActive }) {
     const sidebarAnimation = gsap.timeline();
     if (isBurgerActive) {
       sidebarAnimation.from(".sidebar-container", { x: "200%" });
-      sidebarAnimation.to(".sidebar-container", { x: 0, duration: 1 });
+      sidebarAnimation.to(".sidebar-container", { x: 0, duration: 0.3 });
       setTimeout(() => {
         setMenuActive(true);
       }, 800);
     } else {
       sidebarAnimation.from(".sidebar-container", { x: 0 });
-      sidebarAnimation.to(".sidebar-container", { x: "200%", duration: 1 });
+      sidebarAnimation.to(".sidebar-container", { x: "200%", duration: 0.3 });
       setTimeout(() => {
         setMenuActive(false);
       }, 800);
@@ -35,12 +35,14 @@ function MobileNavBar({ setMenuActive }) {
     <>
       <div className="mob-nav">
         <div className="top-part-container">
-          <div className="mob-logo-container">
-            <p className="mob-letter mob-pos4">I</p>
-            <p className="mob-letter mob-pos3">V</p>
-            <p className="mob-letter mob-pos2">O</p>
-            <p className="mob-letter mob-pos1">A</p>
-          </div>
+          <Link to="hero-section" smooth={true} offset={-190}>
+            <div className="mob-logo-container">
+              <p className="mob-letter mob-pos4">I</p>
+              <p className="mob-letter mob-pos3">V</p>
+              <p className="mob-letter mob-pos2">O</p>
+              <p className="mob-letter mob-pos1">A</p>
+            </div>
+          </Link>
           <div className="mob-burger-container" onClick={handleBurgerClick}>
             <div className={`mob-line mob-line1 ${isBurgerActive && "animate-line1"}`} ref={line1}></div>
             <div className={`mob-line mob-line2 ${isBurgerActive && "animate-line2"}`} ref={line2}></div>
@@ -50,7 +52,7 @@ function MobileNavBar({ setMenuActive }) {
         <div className="sidebar-container">
           <ul className="sidebar-list">
             <Link to="about-section" offset={-190} smooth={true}>
-              <li className="sidebar-option" onClick={() => setIsBurgerActive(false)}>
+              <li className="sidebar-option m-nav-about" onClick={() => setIsBurgerActive(false)}>
                 ABOUT
               </li>
             </Link>
@@ -72,7 +74,7 @@ function MobileNavBar({ setMenuActive }) {
               <li className="sidebar-option">GITHUB</li>
             </a>
             <a href="https://codepen.io/AceNKL" target="_blank">
-              <li className="sidebar-option">CODEPEN</li>
+              <li className="sidebar-option m-nav-codepen">CODEPEN</li>
             </a>
           </ul>
         </div>

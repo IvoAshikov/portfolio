@@ -40,7 +40,7 @@ function ContactForm() {
           <h2 className="contact-header">GET IN TOUCH</h2>
           <div className="right-line"></div>
         </div>
-        <form encType="multipart/form-data" onSubmit={handleMailSubmit}>
+        <form encType="multipart/form-data" onSubmit={handleMailSubmit} autoComplete="off">
           <div className="name-mail-container">
             <div className="name-container">
               <label htmlFor="inp" className="inp">
@@ -71,7 +71,7 @@ function ContactForm() {
             </label>
           </div>
           <div className="captcha-container">
-            <ReCAPTCHA sitekey={`${getSiteKey()}`} onChange={onChange} />
+            <ReCAPTCHA sitekey={getSiteKey()} onChange={onChange} />
             {wrongCaptcha && <span className="wrong-captcha">Please solve the captcha</span>}
           </div>
           <div className="send-button-container">

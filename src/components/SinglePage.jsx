@@ -28,7 +28,7 @@ function SinglePage() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1);
+    }, 5000);
   }, []);
 
   const handleScroll = () => {

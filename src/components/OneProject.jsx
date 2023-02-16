@@ -1,31 +1,37 @@
 import React, { useRef, useState } from "react";
 import "../components-css/OneProject.css";
 
-function OneProject({ direction, gif, name, description, used, github, demo }) {
+function OneProject({ direction, gif, name, description, used, github }) {
   const [isPaused, setIsPaused] = useState(true);
   const videoRef = useRef();
+  const divRef = useRef();
   const playPause = () => {
     setIsPaused(!isPaused);
     if (isPaused) {
       videoRef.current.play();
+      divRef.current.style.opacity = 0;
+      divRef.current.style.transition = "opacity 1s ease";
     } else {
       videoRef.current.pause();
+      divRef.current.style.opacity = 0.3;
+      divRef.current.style.transition = "opacity 1s ease";
     }
+  };
+  const handleMouseOver = () => {
+    videoRef.current.play();
+    divRef.current.style.opacity = 0;
+    divRef.current.style.transition = "opacity 1s ease";
+  };
+  const handleMouseOut = () => {
+    videoRef.current.pause();
+    divRef.current.style.opacity = 0.3;
+    divRef.current.style.transition = "opacity 1s ease";
   };
   return (
     <>
       <div className="one-project-container" style={{ direction: `${direction}` }}>
-        <video
-          src={`${gif}`}
-          className="project-gif"
-          ref={videoRef}
-          muted
-          loop
-          playsInline
-          onMouseDown={playPause}
-          onMouseOver={() => videoRef.current.play()}
-          onMouseOut={() => videoRef.current.pause()}
-        ></video>
+        <video src={`${gif}`} className="project-gif" ref={videoRef} muted loop playsInline></video>
+        <div className="video-filter" ref={divRef} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onMouseDown={playPause}></div>
         <div className="project-text-container">
           <h2 className="project-name">{name}</h2>
           <div className="project-description">
