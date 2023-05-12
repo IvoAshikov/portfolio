@@ -17,17 +17,6 @@ function AboutSection() {
               As a self-taught developer, I bring a unique perspective on problem-solving and approach projects with determination and creativity. I believe that with hard work and dedication, I can
               make a valuable contribution to any team.
             </p>
-            <p className="about-text"> Some of the technologies that I am familiar with are:</p>
-            <div className="technologies-list-container">
-              <ul className="technologies-list">
-                <li className="technology">HTML5</li>
-                <li className="technology">CSS3</li>
-                <li className="technology">Tailwind CSS</li>
-                <li className="technology">JavaScript</li>
-                <li className="technology">GSAP</li>
-                <li className="technology">React.js</li>
-              </ul>
-            </div>
           </div>
           <div className="ph-pos-container">
             <div className="frame-container">

@@ -10,6 +10,7 @@ import ContactForm from "./ContactForm";
 import Footer from "./Footer";
 import MobileNavBar from "./MobileNavBar";
 import "../components-css/SinglePage.css";
+import TechStackSection from "./TechStackSection";
 
 function SinglePage() {
   const [currentPosition, setCurrentPosition] = useState(0);
@@ -50,7 +51,7 @@ function SinglePage() {
       {!loading && (
         <div className="main-content">
           <>
-            {window.innerWidth <= 1024 && <MobileNavBar menuActive={isMobileBurgerActive} setMenuActive={setIsMobileBurgerActive} />}
+            {window.innerWidth <= 1024 && <MobileNavBar menuActive={isMobileBurgerActive} setMenuActive={setIsMobileBurgerActive} mode={isLightModeActive} />}
             {window.innerWidth > 1024 && (
               <>
                 <NavBar position={currentPosition} mode={isLightModeActive} setMode={setIsLightModeActive} />
@@ -59,8 +60,9 @@ function SinglePage() {
               </>
             )}
             <div className={`${isMobileBurgerActive ? "blur" : ""}`}>
-              <HeroSection />
+              <HeroSection mode={isLightModeActive} />
               <AboutSection />
+              <TechStackSection />
               <MyWorkSection />
               <ContactForm />
               <Footer />

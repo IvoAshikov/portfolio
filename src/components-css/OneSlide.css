@@ -1,0 +1,21 @@
+.slide {
+  width: 75px;
+  height: 75px;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+
+.slide:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .slide {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}

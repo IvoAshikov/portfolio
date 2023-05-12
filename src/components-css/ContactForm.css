@@ -186,6 +186,8 @@
 .send-button:hover {
   background-color: var(--button-hover);
   transition: background-color 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .captcha-container {

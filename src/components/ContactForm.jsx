@@ -5,7 +5,6 @@ import { getSiteKey } from "../CaptchaKeys";
 
 function ContactForm() {
   const [wrongCaptcha, setWrongCaptcha] = useState(undefined);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   let captcha;
   function onChange(value) {
     if (value) {
@@ -26,9 +25,6 @@ function ContactForm() {
   const resetCaptcha = () => {
     if (captcha !== null && captcha !== undefined) {
       captcha.reset();
-    }
-    if (!wrongCaptcha) {
-      setIsSubmitted(true);
     }
   };
 
@@ -53,7 +49,7 @@ function ContactForm() {
             </div>
             <div className="mail-container">
               <label htmlFor="inp" className="inp">
-                <input type="email" name="email" required className="inputs" placeholder="&nbsp;" />
+                <input type="text" required className="inputs" placeholder="&nbsp;" autoComplete="off" />
                 <span className="label">Email</span>
                 <svg width="200px" height="26px" viewBox="0 0 200 26" className="contact-form-svg">
                   <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 200,25"></path>
@@ -78,7 +74,6 @@ function ContactForm() {
             <button className="send-button" type="submit" onClick={resetCaptcha}>
               Send
             </button>
-            {isSubmitted && <span className="email-sent">Email sent</span>}
           </div>
         </form>
       </section>

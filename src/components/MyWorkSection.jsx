@@ -6,11 +6,13 @@ import gsap from "gsap";
 import TwitterClone from "../imgs/TwitterCloneGIF.mp4";
 import SpotifyClone from "../imgs/SpotifyCloneGIF.mp4";
 import PathFind from "../imgs/PathfindingVisualizerGIF.mp4";
+import CarRental from "../imgs/CarRentalGIF.mp4";
 
 function MyWorkSection() {
   const [activeButton, setActiveButton] = useState(0);
   const [video, setVideo] = useState(TwitterClone);
   let appearing = gsap.timeline();
+
   const handleButtonClick = (index) => {
     setActiveButton(index);
     appearing.from(".projects-container", { scale: 0 });
@@ -54,6 +56,16 @@ function MyWorkSection() {
             }}
           >
             03
+          </button>
+          <button
+            className={`project-four project-button ${activeButton === 3 && "active"}`}
+            id="four"
+            onClick={() => {
+              handleButtonClick(3);
+              setVideo(CarRental);
+            }}
+          >
+            04
           </button>
         </div>
         <div className="projects-container">

@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Link } from "react-scroll";
 import "../components-css/MobileNavBar.css";
 
-function MobileNavBar({ setMenuActive }) {
+function MobileNavBar({ setMenuActive, mode }) {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
   const line1 = useRef();
   const line2 = useRef();
@@ -44,9 +44,9 @@ function MobileNavBar({ setMenuActive }) {
             </div>
           </Link>
           <div className="mob-burger-container" onClick={handleBurgerClick}>
-            <div className={`mob-line mob-line1 ${isBurgerActive && "animate-line1"}`} ref={line1}></div>
-            <div className={`mob-line mob-line2 ${isBurgerActive && "animate-line2"}`} ref={line2}></div>
-            <div className={`mob-line mob-line3 ${isBurgerActive && "animate-line3"}`} ref={line3}></div>
+            <div className={`mob-line mob-line1 ${isBurgerActive && "animate-line1"}`} ref={line1} style={mode ? { backgroundColor: "#333" } : { backgroundColor: "#f3f3f3" }}></div>
+            <div className={`mob-line mob-line2 ${isBurgerActive && "animate-line2"}`} ref={line2} style={mode ? { backgroundColor: "#333" } : { backgroundColor: "#f3f3f3" }}></div>
+            <div className={`mob-line mob-line3 ${isBurgerActive && "animate-line3"}`} ref={line3} style={mode ? { backgroundColor: "#333" } : { backgroundColor: "#f3f3f3" }}></div>
           </div>
         </div>
         <div className="sidebar-container">

@@ -28,29 +28,6 @@
   margin-top: 3rem;
 }
 
-.technologies-list-container {
-  width: 100%;
-}
-
-.technologies-list {
-  list-style: none;
-  columns: 2;
-  padding: 1em;
-}
-
-.technology::before {
-  content: "";
-  border-color: transparent var(--primary-color);
-  border-style: solid;
-  border-width: 0.25em 0 0.25em 0.35em;
-  display: block;
-  height: 0;
-  width: 0;
-  left: -1em;
-  top: 0.9em;
-  position: relative;
-}
-
 .frame-container {
   margin-left: 5rem;
   margin-top: 2rem;
@@ -130,13 +107,6 @@
   }
   .frame-container {
     margin: 0;
-  }
-  .technologies-list-container {
-    width: 80%;
-    padding-left: 2rem;
-  }
-  .technology {
-    width: 100%;
   }
   .ph-pos-container {
     width: 100%;

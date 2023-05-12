@@ -74,6 +74,14 @@
   stroke: var(--primary-color);
 }
 
+canvas {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -5;
+}
+
 @media screen and (max-width: 1024px) {
   .form-one {
     display: none;
